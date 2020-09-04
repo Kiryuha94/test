@@ -1,6 +1,7 @@
 html {
   position: relative;
-  min-height: 100%;
+  min-height: 90%;
+
 }
 
 body {
@@ -12,6 +13,7 @@ body {
   background-color: rgb(94, 172, 165);
   position: fixed;
 }
+
 *,
 *:after,
 *:before {
