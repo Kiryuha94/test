@@ -1,7 +1,9 @@
 html {
+  margin: 0;
   position: relative;
   min-height: 90%;
 
+  padding: 1;
 }
 
 body {
