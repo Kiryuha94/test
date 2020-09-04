@@ -3,6 +3,7 @@ html {
   position: relative;
   min-height: 90%;
 
+  padding: 0;
 }
 
 body {
