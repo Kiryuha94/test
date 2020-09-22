@@ -1,23 +1,40 @@
-const dom = () => {
-    const but_user = document.getElementById("but_user")
-    const signin_exit = document.getElementById("signin_exit")
-    const signin_but = document.getElementById("signin_but")
-    const signin = document.getElementById("signin")
-
-
-    but_user.addEventListener("click", () => {
-     signin.classList.remove("hidden")
-    })
-
-    signin_exit.addEventListener("click", () => {
-        signin.classList.add("hidden")
-    } )
-   
-    signin_but.addEventListener("click", () => {
-        alert("Дароу!")
-    })
-
-
+class Hidden {
+  constructor(id) {
+    this.hidden = document.getElementById(id);
+  }
+  show() {
+    this.hidden.classList.remove("hidden")
+  }
+  
+  hide() {
+    this.hidden.classList.add("hidden")
+  }
 }
+const signinHidden = new Hidden ("signin")
+const dom = () => {
+  const butUser = document.getElementById("butUser");
+  const signinExit = document.getElementById("signinExit");
+  const signinBut = document.getElementById("signinBut");
+  const signin = document.getElementById("signin");
+  const signinPutEmail = document.getElementById("signinPutEmail");
+  const signinPutPassword = document.getElementById("signinPutPassword");
 
-document.addEventListener('DOMContentLoaded', dom)
+  butUser.addEventListener("click", () => {
+    signinHidden.show()
+  });
+
+  signinExit.addEventListener("click", () => {
+    signinHidden.hide()
+  });
+
+  signinBut.addEventListener("click", () => {
+    const signinEmail = signinPutEmail.value;
+    const signinPassword = signinPutPassword.value;
+
+    const curUser = { signinEmail, signinPassword };
+    console.log(curUser);
+
+    
+  });
+};
+document.addEventListener("DOMContentLoaded", dom);

@@ -23,7 +23,9 @@
           <a class="nav__info" href="#">Служба поддержки</a>
         </nav>
         <nav class="nav__header">
-          <a class="nav__link" id="but_user" href="#"><i class="fas fa-user"></i>Вход</a>
+          <a class="nav__link" id="butUser" href="#"
+            ><i class="fas fa-user"></i>Вход</a
+          >
 
           <a class="nav__link" href="#"
             ><i class="fas fa-user-edit"></i>Регистрация</a
@@ -351,52 +353,32 @@
     </footer>
     <!-- SIGN IN -->
     <div id="signin" class="signin hidden">
-        <div class="signin_cont">
+      <div class="signin_cont">
         <h3 class="singin_header">Вход для зарегистрированных пользователей</h3>
         <div class="row">
           <label for="LoginForm_email" class="singin_label"
             >Электронная почта(email)</label
           >
-          <input name="LoginForm[email]" type="email" class="singin_put" />
+          <input
+            id="signinPutEmail"
+            name="LoginForm[email]"
+            type="email"
+            class="singin_put"
+          />
         </div>
         <div class="row">
           <label for="LoginForm_password" class="singin_label">Пароль</label>
           <input
+            id="signinPutPassword"
             name="LoginForm[password]"
             type="password"
             class="singin_put"
           />
         </div>
-        <span id="signin_exit" class="signin_exit">+</span>
-        <button id="signin_but" type="button" class="signni_but">Войти</button>
+        <span id="signinExit" class="signin_exit">+</span>
+        <button id="signinBut" type="button" class="signni_but">Войти</button>
       </div>
     </div>
-
-    <!-- SIGN UP -->
-    <div id="signup" class="signin hidden">
-      <div class="signin_cont">
-      <h3 class="singin_header">Вход для зарегистрированных пользователей</h3>
-      <div class="row">
-        <label for="LoginForm_email" class="singin_label"
-          >Электронная почта(email)</label
-        >
-        <input name="LoginForm[email]" type="email" class="singin_put" />
-      </div>
-      <div class="row">
-        <label for="LoginForm_password" class="singin_label">Пароль</label>
-        <input
-          name="LoginForm[password]"
-          type="password"
-          class="singin_put"
-        />
-      </div>
-      <span id="signin_exit" class="signin_exit">+</span>
-      <button id="signin_but" type="button" class="signni_but">Войти</button>
-    </div>
-  </div>
-
-
-
 
     <script src="ClinCompJS.js"></script>
   </body>
