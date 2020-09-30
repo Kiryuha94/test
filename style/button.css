@@ -1,0 +1,10 @@
+
+.button{
+    margin: 0.3rem;
+  font-size: 1.1rem;
+  font-family: math;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+  margin: 20px ;
+}

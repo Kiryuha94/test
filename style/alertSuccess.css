@@ -1,0 +1,25 @@
+.alertSuccess{
+    position: absolute;
+    width: 30rem;
+    height: 8rem;
+    border: 2px solid greenyellow;
+    background-color: rgb(186, 238, 186);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    top: 40px;
+    left: 40px;
+    transform: all 2s;
+    
+
+}
+.alertSuccess > button{
+    opacity: 0.6;
+}
+
+.alertSuccess > button:hover{
+    opacity: 1;
+    background-color: lawngreen;
+    font-size: 5rem;
+}

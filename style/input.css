@@ -1,0 +1,10 @@
+.input{
+    margin-bottom: 15px;
+
+}
+.input > h4{
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+}

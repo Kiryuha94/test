@@ -1,0 +1,9 @@
+
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(43, 41, 41, 0.856);
+}

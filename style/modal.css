@@ -1,0 +1,24 @@
+.modal{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40vw;
+    background-color: rgb(241, 212, 212);
+    border: 1px solid #333;
+    z-index: 1;
+    left: 30%;
+    top: 200px;
+}
+.modal > h1{
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: cursive;
+    
+} 
+.modal > h3{
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: fantasy;
+}
