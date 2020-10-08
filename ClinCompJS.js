@@ -37,9 +37,9 @@
 const modal = new Modal({
   title: "Вход для зарегистрированных пользователей",
   text: "Введите ваши данные",
-  butOkSignin: () => {
-    let windOK;
-  },
+   butOkSignin: () => {
+     
+   },
 
   // butClickCan: () => {
   //   let windCansel;
@@ -48,7 +48,7 @@ const modal = new Modal({
 document.addEventListener("DOMContentLoaded", () => {
   const butClick = document.getElementById("butUser");
   butClick.addEventListener("click", () => {
-    modal.show();
+    modal.showModal();
   });
   
 });

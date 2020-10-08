@@ -1,21 +1,28 @@
-class AlertModal {
+class AlertModal extends Visibility {
+  _visibility = false
+
   constructor({ title, alertHendClick, isSuccess = true }) {
+    super()
     this.title = title;
     this.alertHendClick = alertHendClick;
     this.isSuccess = isSuccess;
     this.element = this._createAlertModal();
+    this._addListeners()
+  }
+  
+  showAlert() {
+   this.show(this.element);
+    this._visibility = true
   }
 
-  show() {
-    document.body.appendChild(this.element);
+  hideAlert() {
+    this.hide(this.element)
+    this._visibility = false
   }
-  hide() {
-    this.element.remove();
-  }
-
+  
   _createAlertModal() {
     const alertModal = document.createElement("div");
-
+  
     if (this.isSuccess) {
       alertModal.classList.add("alertSuccess");
     } else {
@@ -28,8 +35,8 @@ class AlertModal {
     const buttonAlert = new Button({
       text: "OK",
       butClick: () => {
-        if (this.alertHendClick) this.alertHendClick();
-        this.hide();
+          if (this.alertHendClick) this.alertHendClick();
+        this.hideAlert();
       },
     });
 
@@ -37,6 +44,16 @@ class AlertModal {
     alertModal.appendChild(buttonAlert.element);
 
     return alertModal;
+
+  }
+
+  _addListeners() {
+    document.body.addEventListener("keydown", e => {
+      const isEnterKey = e.key === "Enter"
+      if (this._visibility && isEnterKey) {
+        this.hideAlert()
+      }
+    })
   }
 }
 
